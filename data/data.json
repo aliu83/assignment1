@@ -1,0 +1,27 @@
+[
+  {
+    "NAME": "Bill Gates",
+    "COUNTRY":"UNITED STATES",
+    "NET_WORTH": 75
+  },
+  {
+    "NAME": "Amancio Ortega",
+    "COUNTRY":"Spain",
+    "NET_WORTH": 67
+  },
+  {
+    "NAME": "Warren Buffett",
+    "COUNTRY":"UNITED STATES",
+    "NET_WORTH": 60.8 
+  },
+  {
+    "NAME": "Carlos Slim",
+    "COUNTRY":"Mexico",
+    "NET_WORTH": 50 
+  },
+  {
+    "NAME": "Jeff Bezos",
+    "COUNTRY":"UNITED STATES",
+    "NET_WORTH": 45.2 
+  }
+]
