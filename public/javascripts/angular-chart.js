@@ -1,7 +1,7 @@
 var app = angular.module('app', []);
 
 app.controller('dataController', function($scope, $http) {
-  $http.get("https://assignment-1-spring-2016-ali83.c9users.io/Billionaire").then(function (response) {
+  $http.get("https://assignment-1-spring-2016-aliu83.c9users.io/Billionaire").then(function (response) {
     
       google.charts.load('current', {packages: ['corechart', 'bar']});
       google.charts.setOnLoadCallback(function() {
@@ -12,13 +12,13 @@ app.controller('dataController', function($scope, $http) {
 
 function formatDataTable(chartdata) {
   var data = [];
-  var header = ['Name', 'Country'];
+  var header = ['Name', 'Billions'];
   
   data.push(header);
   
   for (var i = 0; i < chartdata.length; i++) {
     var temp = [];
-    temp.push(parseInt(chartdata[i].NAME));
+    temp.push(chartdata[i].NAME); 
     temp.push(parseInt(chartdata[i].NET_WORTH));
     data.push(temp);
   }
@@ -31,7 +31,7 @@ function formatDataTable(chartdata) {
 function getOptions()
 {
      var options = {
-        title: 'Billionaires in 2016',
+        title: 'Top 5 billionaires in 2016',
         chartArea: {width: '50%'},
         hAxis: {
           title: 'Net worth in billions',

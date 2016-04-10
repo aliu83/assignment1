@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 
 var BillionaireSchema = new mongoose.Schema({
   _id: String,
-  value: Number,
+  NAME: String,
+  NET_WORTH: Number,
 },
 {
     collection: 'billionaire_counts'
