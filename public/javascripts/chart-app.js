@@ -1,25 +1,25 @@
 var app = angular.module('app', []);
 
-app.controller('dataController', function($scope, $http) {
-  $http.get("https://assignment-1-spring-2016-aliu83.c9users.io/Billionaire").then(function (response) {
-    
-      google.charts.load('current', {packages: ['corechart', 'bar']});
-      google.charts.setOnLoadCallback(function() {
-        formatDataTable(response.data);
-      });
+
+google.load("visualization", "1", {packages:["corechart"]});
+
+app.controller('MainCtrl', ['$scope', '$http',  function($scope, $http) {
+  $http.get("/data").success(function (data) {
+        formatDataTable(data);
   });
-});
+}]);
 
 function formatDataTable(chartdata) {
   var data = [];
   var header = ['Name', 'Billions'];
-  
+     
   data.push(header);
   
-  for (var i = 0; i < chartdata.length; i++) {
+for (var i = 0; i < chartdata.length; i++) {
     var temp = [];
     temp.push(chartdata[i].NAME); 
     temp.push(parseInt(chartdata[i].NET_WORTH));
+  
     data.push(temp);
   }
   

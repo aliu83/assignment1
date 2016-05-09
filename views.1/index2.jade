@@ -1,0 +1,22 @@
+extends layout
+
+
+doctype html
+html
+head
+title= title
+    
+script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js")
+script(src="https://www.google.com/jsapi")
+script(src="javascripts/chart-app.js")
+link(rel='stylesheet', href='/stylesheets/bootstrap-social.css')
+link(rel='stylesheet', href='/stylesheets/style.css')
+body(ng-app='app')
+ div(ng-controller='MainController')
+ #chart_div(style='width: 900px; height: 500px;')
+    
+
+
+
+
+
